@@ -26,6 +26,7 @@ public class calculator {
     private JLabel label2 = new JLabel();
     private JLabel label3 = new JLabel();
     private JLabel label4 = new JLabel();
+    private JButton button = new JButton("Рассчитать");
     private JPanel panel = new JPanel();
 
     public calculator() {
@@ -41,6 +42,7 @@ public class calculator {
 
         Font font = new Font("Times New Roman", Font.BOLD, 40);
         Font font1 = new Font("Times New Roman", Font.BOLD, 20);
+        Font btnFont = new Font("Times New Roman", Font.BOLD, 80);
 
         JLabel mainLabel = new JLabel("<html>Расчет платы за отопление<br/>в квартире</html>");
         mainLabel.setBounds(0, 0, 600, 100);
@@ -55,17 +57,40 @@ public class calculator {
         label4.setText("Введите  площадь квартиры:");
 
         elements.SetLabels(label1, panel, 150, font1);
-
         elements.SetLabels(label2, panel, 250, font1);
-
         elements.SetLabels(label3, panel, 350, font1);
-
         elements.SetLabels(label4, panel, 450, font1);
 
         elements.SetTextFields(textField1, panel, 150);
         elements.SetTextFields(textField2, panel, 250);
         elements.SetTextFields(textField3, panel, 350);
         elements.SetTextFields(textField4, panel, 450);
+
+        elements.SetButtons(button, panel, 50, 530, btnFont);
+
+        ActionListener MOUSE_CLICKED = new ListenerButton();
+        button.addActionListener(MOUSE_CLICKED);
+
+        frame.setVisible(true);
     }
 
+    public JTextField getJTextField1() {
+        return textField1;
+    }
+
+    public JTextField getJTextField2() {
+        return textField2;
+    }
+
+    public JTextField getJTextField3() {
+        return textField3;
+    }
+
+    public JTextField getJTextField4() {
+        return textField4;
+    }
+
+    public JPanel getJPanel() {
+        return panel;
+    }
 }
