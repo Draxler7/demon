@@ -42,7 +42,7 @@ public class calculator {
         Font font1 = new Font("Times New Roman", Font.BOLD, 15);
         Font btnFont = new Font("Times New Roman", Font.BOLD, 45);
 
-        JLabel mainLabel = new JLabel("<html>Расчет платы за отопление<br/>в квартире</html>");
+        JLabel mainLabel = new JLabel("<html>rасчет платы за отопление<br/>в квартире</html>");
         mainLabel.setBounds(0, 0, 600, 100);
         mainLabel.setHorizontalAlignment(SwingConstants.CENTER);
         mainLabel.setForeground(java.awt.Color.WHITE);
