@@ -53,8 +53,8 @@ public class calculator {
 
         label1.setText("Введите тарифную стоимость:");
         label2.setText("Введите площадь здания:");
-        label3.setText("<html>Введите потребляемый зданием<br/>суммарный объем тепла:</html>");
-        label4.setText("Введите  площадь квартиры:");
+        label3.setText("<html>Введите площадь<br>общеведомого имущества</html>");
+        label4.setText("Введите площадь квартиры:");
 
         elements.SetLabels(label1, panel, 150, font1);
         elements.SetLabels(label2, panel, 250, font1);
@@ -72,6 +72,11 @@ public class calculator {
         button.addActionListener(MOUSE_CLICKED);
 
         frame.setVisible(true);
+
+        elements.setNumericOnly(textField1);
+        elements.setNumericOnly(textField2);
+        elements.setNumericOnly(textField3);
+        elements.setNumericOnly(textField4);
     }
 
     public JTextField getJTextField1() {
@@ -92,5 +97,9 @@ public class calculator {
 
     public JPanel getJPanel() {
         return panel;
+    }
+
+    public JFrame getJFrame() {
+        return frame;
     }
 }

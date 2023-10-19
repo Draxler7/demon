@@ -1,11 +1,14 @@
 package com;
 
 import java.awt.Font;
+import java.awt.event.KeyAdapter;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+
+import javafx.scene.input.KeyEvent;
 
 public class elements {
     static void SetLabels(JLabel label, JPanel panel, int y, Font font1) {
@@ -24,5 +27,18 @@ public class elements {
         button.setBounds(x, y, 475, 200);
         button.setFont(font);
         panel.add(button);
+    }
+
+    public static void setNumericOnly(JTextField jTextField) {
+        jTextField.addKeyListener(new KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent e) {
+                char c = e.getKeyChar();
+                if ((!Character.isDigit(c) ||
+                        (c == java.awt.event.KeyEvent.VK_BACK_SPACE) ||
+                        (c == java.awt.event.KeyEvent.VK_DELETE))) {
+                    e.consume();
+                }
+            }
+        });
     }
 }
