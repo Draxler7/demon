@@ -8,7 +8,6 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import javafx.scene.input.KeyEvent;
 
 public class elements {
     static void SetLabels(JLabel label, JPanel panel, int y, Font font1) {
@@ -16,6 +15,7 @@ public class elements {
         label.setForeground(java.awt.Color.WHITE);
         label.setFont(font1);
         panel.add(label);
+        System.out.println("Gratz");
     }
 
     static void SetTextFields(JTextField textField, JPanel panel, int y) {

@@ -8,8 +8,6 @@ import javax.swing.SwingConstants;
 import javax.swing.GroupLayout.Alignment;
 import javax.xml.bind.JAXBPermission;
 
-import javafx.scene.paint.Color;
-
 import javax.swing.JButton;
 import java.awt.Font;
 import java.awt.event.ActionListener;
