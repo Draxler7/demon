@@ -38,9 +38,9 @@ public class calculator {
         panel.setBackground(java.awt.Color.GRAY);
         frame.add(panel);
 
-        Font font = new Font("Times New Roman", Font.BOLD, 40);
-        Font font1 = new Font("Times New Roman", Font.BOLD, 20);
-        Font btnFont = new Font("Times New Roman", Font.BOLD, 80);
+        Font font = new Font("Times New Roman", Font.BOLD, 30);
+        Font font1 = new Font("Times New Roman", Font.BOLD, 15);
+        Font btnFont = new Font("Times New Roman", Font.BOLD, 45);
 
         JLabel mainLabel = new JLabel("<html>Расчет платы за отопление<br/>в квартире</html>");
         mainLabel.setBounds(0, 0, 600, 100);
