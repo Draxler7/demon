@@ -8,7 +8,10 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> fec02b552a34114bc199727160aa4e1d287f3914
 public class elements {
     static void SetLabels(JLabel label, JPanel panel, int y, Font font1) {
         label.setBounds(40, y, 300, 40);
