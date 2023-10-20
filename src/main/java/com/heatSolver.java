@@ -1,11 +1,12 @@
 package com;
 
-public final class heatSolver extends solver {
+public final class HeatSolver extends Solver {
 
     protected double otv;
 
-    protected heatSolver(Double squareFlat, Double squareFlatsInHouse, Double squareHouse, Double tarif) {
-        otv = Answer(squareFlat, squareFlatsInHouse, squareHouse, tarif);
+    // Поиск ответа через абстрактный класс
+    protected HeatSolver(Double squareFlat, Double squareFlatsInHouse, Double squareHouse, Double tarif) {
+        otv = answer(squareFlat, squareFlatsInHouse, squareHouse, tarif);
     }
 
     public Double getOtv() {

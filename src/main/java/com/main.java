@@ -1,13 +1,11 @@
 package com;
 
-import java.awt.EventQueue;
-
 public class main {
 
-    protected static calculator window;
+    protected static Calculator window;
 
     public static void main(String[] args) {
-        window = new calculator();
+        window = new Calculator();
 
     }
 

@@ -5,16 +5,14 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
-import javax.swing.GroupLayout.Alignment;
-import javax.xml.bind.JAXBPermission;
 
 import javax.swing.JButton;
 import java.awt.Font;
 import java.awt.event.ActionListener;
-import java.security.AlgorithmConstraints;
 
-public class calculator {
+public class Calculator {
 
+    // Объекты GUI
     JFrame frame;
     private JTextField textField1 = new JTextField();
     private JTextField textField2 = new JTextField();
@@ -26,55 +24,66 @@ public class calculator {
     private JLabel label4 = new JLabel();
     private JButton button = new JButton("Рассчитать");
     private JPanel panel = new JPanel();
+    private String fnt = "Times New Roman";
 
-    public calculator() {
+    public Calculator() {
+        // Окно
         frame = new JFrame();
         frame.getContentPane().setBackground(java.awt.Color.GRAY);
         frame.setBounds(300, 200, 600, 800);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setResizable(true);
 
+        // Панель
         panel.setLayout(null);
         panel.setBackground(java.awt.Color.GRAY);
         frame.add(panel);
 
-        Font font = new Font("Times New Roman", Font.BOLD, 30);
-        Font font1 = new Font("Times New Roman", Font.BOLD, 15);
-        Font btnFont = new Font("Times New Roman", Font.BOLD, 45);
+        // Шрифты
+        Font font = new Font(fnt, Font.BOLD, 30);
+        Font font1 = new Font(fnt, Font.BOLD, 15);
+        Font btnFont = new Font(fnt, Font.BOLD, 45);
 
-        JLabel mainLabel = new JLabel("<html>rасчет платы за отопление<br/>в квартире</html>");
+        // Главная метка
+        JLabel mainLabel = new JLabel("<html>Расчет платы за отопление<br/>в квартире</html>");
         mainLabel.setBounds(0, 0, 600, 100);
         mainLabel.setHorizontalAlignment(SwingConstants.CENTER);
         mainLabel.setForeground(java.awt.Color.WHITE);
         mainLabel.setFont(font);
         panel.add(mainLabel);
 
+        // Текст в метках
         label1.setText("Введите тарифную стоимость:");
         label2.setText("Введите площадь здания:");
         label3.setText("<html>Введите площадь<br>общеведомого имущества</html>");
         label4.setText("Введите площадь квартиры:");
 
-        elements.SetLabels(label1, panel, 150, font1);
-        elements.SetLabels(label2, panel, 250, font1);
-        elements.SetLabels(label3, panel, 350, font1);
-        elements.SetLabels(label4, panel, 450, font1);
+        // Добавление меток на панель
+        Elements.setLabels(label1, panel, 150, font1);
+        Elements.setLabels(label2, panel, 250, font1);
+        Elements.setLabels(label3, panel, 350, font1);
+        Elements.setLabels(label4, panel, 450, font1);
 
-        elements.SetTextFields(textField1, panel, 150);
-        elements.SetTextFields(textField2, panel, 250);
-        elements.SetTextFields(textField3, panel, 350);
-        elements.SetTextFields(textField4, panel, 450);
+        // Добавление текстовых полей на панель
+        Elements.setTextFields(textField1, panel, 150);
+        Elements.setTextFields(textField2, panel, 250);
+        Elements.setTextFields(textField3, panel, 350);
+        Elements.setTextFields(textField4, panel, 450);
 
-        elements.SetButtons(button, panel, 50, 530, btnFont);
+        // Добавление кнопки
+        Elements.setButtons(button, panel, 50, 530, btnFont);
 
-        ActionListener MOUSE_CLICKED = new ListenerButton();
-        button.addActionListener(MOUSE_CLICKED);
+        // Метод при нажатии на кнопку
+        ActionListener mouseClicked = new ListenerButton();
+        button.addActionListener(mouseClicked);
 
         frame.setVisible(true);
 
-        elements.setNumericOnly(textField1);
-        elements.setNumericOnly(textField2);
-        elements.setNumericOnly(textField3);
-        elements.setNumericOnly(textField4);
+        // Ограничивание ввода в текстовые поля
+        Elements.setNumericOnly(textField1);
+        Elements.setNumericOnly(textField2);
+        Elements.setNumericOnly(textField3);
+        Elements.setNumericOnly(textField4);
     }
 
     public JTextField getJTextField1() {
