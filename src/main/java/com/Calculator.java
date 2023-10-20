@@ -32,7 +32,8 @@ public class Calculator {
         frame.getContentPane().setBackground(java.awt.Color.GRAY);
         frame.setBounds(300, 200, 600, 800);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setResizable(true);
+        frame.setResizable(false);
+        frame.setTitle("Калькулятор расчета оплаты отопления в квартире");
 
         // Панель
         panel.setLayout(null);
