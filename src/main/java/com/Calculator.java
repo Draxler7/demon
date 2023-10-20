@@ -5,9 +5,11 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
-
+import javax.swing.Icon;
 import javax.swing.JButton;
 import java.awt.Font;
+import java.awt.Image;
+import java.awt.Toolkit;
 import java.awt.event.ActionListener;
 
 public class Calculator {
@@ -34,6 +36,8 @@ public class Calculator {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setResizable(false);
         frame.setTitle("Калькулятор расчета оплаты отопления в квартире");
+        Image img = Toolkit.getDefaultToolkit().getImage(".\\src\\pic\\jpg1685139384.jpg");
+        frame.setIconImage(img);
 
         // Панель
         panel.setLayout(null);
