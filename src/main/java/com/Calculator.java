@@ -5,7 +5,6 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
-import javax.swing.Icon;
 import javax.swing.JButton;
 import java.awt.Font;
 import java.awt.Image;
